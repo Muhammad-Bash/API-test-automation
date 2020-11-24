@@ -1,0 +1,149 @@
+{
+	"id": "b38a73d7-e10f-4508-b980-9bdc7cdf30c9",
+	"name": "API_Test_Automation",
+	"timestamp": "2020-11-24T08:32:23.530Z",
+	"collection_id": "ce398543-041c-4e97-bc4b-225753880e73",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a8f2ff71-399e-45d3-9af9-c768c491ee09",
+			"name": "Get All",
+			"url": "https://demo.fusio-project.org/index.php/todo",
+			"time": 1102,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status code name has string": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1102
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status code name has string": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "fa7ff359-4348-4ca8-a06b-3580efa889c6",
+			"name": "Get Single",
+			"url": "https://demo.fusio-project.org/index.php/todo/?todo_id=2",
+			"time": 257,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				257
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "07fb329a-6131-4ef3-93ac-69075f5fefc8",
+			"name": "Create New",
+			"url": "https://reqres.in/api/user",
+			"time": 992,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				992
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "183fe7c7-7a3c-48f9-a2e8-9ff817498007",
+			"name": "Update User",
+			"url": "https://reqres.in/api/user/2",
+			"time": 497,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				497
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "635ec0d0-0d19-44f6-925a-d40616dc8b3f",
+			"name": "Delete User",
+			"url": "https://reqres.in/api/users/2",
+			"time": 337,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				337
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3185,
+	"collection": {
+		"requests": [
+			{
+				"id": "a8f2ff71-399e-45d3-9af9-c768c491ee09",
+				"method": "GET"
+			},
+			{
+				"id": "fa7ff359-4348-4ca8-a06b-3580efa889c6",
+				"method": "GET"
+			},
+			{
+				"id": "07fb329a-6131-4ef3-93ac-69075f5fefc8",
+				"method": "POST"
+			},
+			{
+				"id": "183fe7c7-7a3c-48f9-a2e8-9ff817498007",
+				"method": "PUT"
+			},
+			{
+				"id": "635ec0d0-0d19-44f6-925a-d40616dc8b3f",
+				"method": "DELETE"
+			}
+		]
+	}
+}
