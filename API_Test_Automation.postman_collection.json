@@ -54,8 +54,14 @@
 					"script": {
 						"id": "9aaaab63-d82c-4456-b526-f0d53fffca04",
 						"exec": [
-							"\r",
-							""
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () { pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -90,6 +96,26 @@
 		},
 		{
 			"name": "Create New",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ce2dc82b-6341-40c6-a0af-0573c5dbf9e3",
+						"exec": [
+							"\r",
+							"pm.test(\"Status code name has no string\", function () { pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -111,6 +137,25 @@
 		},
 		{
 			"name": "Update User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff2ede1a-cbf6-49e9-be48-0384e74a45ae",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () { pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -133,6 +178,25 @@
 		},
 		{
 			"name": "Delete User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "487894c9-a235-4dfa-ac66-2848260983ea",
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+							"});\r",
+							"pm.test(\"Status code name has No content string\", function () { pm.response.to.have.status(\"No Content\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
